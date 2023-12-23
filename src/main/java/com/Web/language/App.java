@@ -10,7 +10,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        
+        //bu yerdagi ClassPathXml ni AnnotationConfigga almashtridik
     	try (AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ClassConfig.class)) {
 			ILanguageDal language= context.getBean("language", ILanguageDal.class);
 			

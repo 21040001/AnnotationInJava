@@ -1,8 +1,8 @@
 package com.Web.language;
 
-import org.springframework.stereotype.Component;
+/*import org.springframework.stereotype.Component;
 
-@Component("language")
+@Component("language")*/ // bu yerda Componetni ochirib tashladik chunki ortiq sinflarimizni Beanlar bilan boshqarayabmiz
 public class EnglishLan implements ILanguageDal{
 
 	@Override
