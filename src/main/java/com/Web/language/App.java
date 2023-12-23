@@ -1,18 +1,17 @@
 package com.Web.language;
 
 import org.springframework.beans.BeansException;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-/**
- * Hello world!
- *
- */
+
+
+
 public class App 
 {
     public static void main( String[] args )
     {
         
-    	try (ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml")) {
+    	try (AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ClassConfig.class)) {
 			ILanguageDal language= context.getBean("language", ILanguageDal.class);
 			
 			language.dil();
