@@ -13,8 +13,13 @@ public class ClassConfig {
 	//Annotationlarda ham xmlda bo'lgani kabi classlarimizni beanlar orqali boshqara olamiz:
 	@Bean
 	public ILanguageDal language() {
-		return new EnglishLan();
+		return new UzbekLan();
+	}
+	@Bean
+	public ILanguageMeneger iLanMen() {
+		return new LanguageMeneger(language());
 	}
 	
-
+	
+	
 }

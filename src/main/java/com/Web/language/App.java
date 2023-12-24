@@ -12,8 +12,15 @@ public class App
     {
         //bu yerdagi ClassPathXml ni AnnotationConfigga almashtridik
     	try (AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ClassConfig.class)) {
-			ILanguageDal language= context.getBean("language", ILanguageDal.class);
 			
+    		//1-yol --->
+    		//bu yerda to'gridan LanguageMeneger bilan ishlayabmiz
+    		LanguageMeneger language= new LanguageMeneger(context.getBean("language", ILanguageDal.class));
+    		
+			//2-yol
+    	    // Bu yerda ILanguageMeneger interface orqali ham ILanguageMenegerni boshqarayabmiz
+    		//ILanguageMeneger language= context.getBean("iLanMen", ILanguageMeneger.class);
+    		
 			language.dil();
 		} catch (BeansException e) {
 			// TODO Auto-generated catch block
