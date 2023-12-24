@@ -1,13 +1,14 @@
 package com.Web.language;
 
-/*import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Value;
 
-@Component("language")*/ // bu yerda Componetni ochirib tashladik chunki ortiq sinflarimizni Beanlar bilan boshqarayabmiz
 public class EnglishLan implements ILanguageDal{
 
+	@Value("${language2}")
+	String language;
 	@Override
 	public void dil() {
-		System.out.println("Change language to English");
+		System.out.println("Change language to English "+language);
 		
 	}
 
